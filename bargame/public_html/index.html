@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<link rel="stylesheet" type="text/css" href="css/body.css">
+	<link rel="stylesheet" type="text/css" href="css/death-form.css">
+	<link rel="stylesheet" type="text/css" href="css/social.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/game.css">
+	<link rel="stylesheet" type="text/css" href="css/small-shapes.css">
+	<link rel="stylesheet" type="text/css" href="css/score-circles.css">
+	<link rel="stylesheet" type="text/css" href="css/timer.css">
+
+	<link rel="icon" type="image/png" href="/images/bargame-logo.png"/>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Slackey" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Gochi+Hand" rel="stylesheet">
+
+	<title>Bar Game</title>
+</head>
+
+<body>
+
+	<!--the header is the part where the title plus icon are-->
+	<div id="header">
+		<h1>bar game</h1>
+		<div id="icon">
+			<div class="icon-bar"></div>
+			<div class="icon-bar"></div>
+			<div class="icon-bar"></div>
+		</div>
+	</div>
+
+	<div id="timediv">
+		<h3 id="timer">Play!</h3>
+	</div>
+
+	<div id="game-container">
+		<div id="vertical-line"></div>
+		<div class="bar" id="first-bar"></div>
+		<div class="bar"></div>
+	</div>
+
+
+	<div id="total">
+		<svg id="right"></svg>
+		<svg id="left"></svg>
+	</div>
+
+
+	<svg id="smallShapeContainer"></svg>
+
+
+	<div id="death" class="modal">
+
+		<form id="dead-form" action='php/savescores.php' method='POST' class="modal-content animate">
+			<div class="msgContainer">
+				<h1 id="death-msg">Hello</h1>
+				<span onclick="document.getElementById('death').style.display='none'" class="close" title="Close Modal">&times;</span>
+			</div>
+
+			<div class="death-container">
+				<label class="death-text"><b>Username</b></label>
+				<input type="text" placeholder="Enter Your Name" name="name" id="name-input" required>
+				<input type="hidden" id="score-input" name="score" value="undefined">
+				<button type="submit" id="submit-button">Share your score</button>
+			</div>
+
+			<div class="death-container" style="background-color:#f1f1f1">
+				<button type="button" onclick="document.getElementById('death').style.display='none'" class="cancelbtn">Cancel</button>
+
+			</div>
+		</form>
+	</div>
+
+
+	<!--social icons at the bottom-->
+	<div id="social">
+		<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//bargame.000webhostapp.com/" class="fa fa-facebook"></a>
+		<a href="https://twitter.com/home?status=https%3A//bargame.000webhostapp.com/" class="fa fa-twitter"></a>
+		<a href="https://plus.google.com/share?url=https%3A//bargame.000webhostapp.com/" class="fa fa-google"></a>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/utilities.js"></script>
+	<script src="js/deathform.js"></script>
+	<script src="js/game.js"></script>
+	<script src="js/icons.js"></script>
+	<script src="js/format.js"></script>
+	<script src="js/small-shapes.js"></script>
+	<script src="js/score-circles.js"></script>
+
+
+
+</body>
+
+
+
+
+
+</html>

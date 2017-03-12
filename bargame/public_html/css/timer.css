@@ -1,0 +1,13 @@
+#timediv {
+	position: relative;
+	left: 10px;
+	height: 70px;
+}
+
+#timer {
+	font-family: 'Slackey', cursive;
+	color: #F15946;
+	padding-left: 20px;
+	font-size: 30px;
+}
+
